@@ -7,11 +7,32 @@
             <field name="model">medical.patient</field>
             <field name="inherit_id" ref="medical.medical_patient_view_form"/>
             <field name="arch" type="xml">
-                 <xpath expr="//page[@string='Dependants']" position="after">
+                 <xpath expr="//page[2]" position="after">
                     <page string="Medical Record">
-                        <group string="Medical Record">
-                            <field name="medical_record" nolabel="1"/>
+                        <group string="Historial">
+                            <field name="medical_record" nolabel="1"
+                            placeholder="aca se supone que la fecha y el usuario loggeado se guarda de forma automatica y readonly
+                                  por ahora no esta..."/>
                         </group>
+
+                        <separator string="Enfermedades"></separator>
+                            <field name="disease_ids" widget="one2many_list" mode="tree">
+                                <!--<tree string="Enfermedades">-->
+                                <!--</tree>-->
+                            </field>
+
+                        <separator string="Medicamentos"></separator>
+                            <field name="medication_ids" widget="one2many_list" mode="tree">
+                                <!--<tree string="Medicamentos">-->
+                                <!--</tree>-->
+                            </field>
+                        <separator string="Alergias"></separator>
+                            <field name="allergy_ids" widget="one2many_list" mode="tree">
+                                <!--<tree string="Medicamentos">-->
+                                <!--</tree>-->
+                            </field>
+
+
                     </page>
                 </xpath>
             </field>

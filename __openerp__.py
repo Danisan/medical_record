@@ -29,7 +29,7 @@
     'author': 'LFer',
     'maintainer': 'LFer',
     #'website': 'http://www.',
-    'depends': ['base','medical'],
+    'depends': ['base','medical','medical_patient_disease','medical_medication','medical_patient_disease_allergy'],
     'data': [
         'views/medical_record_partient.xml',
 
