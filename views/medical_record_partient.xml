@@ -8,11 +8,12 @@
             <field name="inherit_id" ref="medical.medical_patient_view_form"/>
             <field name="arch" type="xml">
                  <xpath expr="//page[2]" position="after">
-                     <header>
-                     <button string="Grabar Ultima Consulta"
-                                    type="object" name="add_medical_record"/>
-                     </header>
+
                     <page string="Medical Record">
+                        <header>
+                            <button string="Grabar Ultima Consulta"
+                                    type="object" name="add_medical_record"/>
+                        </header>
                         <group string="Historial">
                             <field name="medical_record" nolabel="1"
                                    placeholder="aca se supone que la fecha y
