@@ -12,7 +12,7 @@ class medical_record_patient(models.Model):
     medical_record_history = fields.Text(
         string='Medical Record', store=True, readonly=True)
 
-    def _add_medical_record(self):
+    def add_medical_record(self):
         self.ensure_one()
         if not self.medical_record_history:
             self.medical_record_history = ''

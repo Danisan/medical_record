@@ -8,16 +8,18 @@
             <field name="inherit_id" ref="medical.medical_patient_view_form"/>
             <field name="arch" type="xml">
                  <xpath expr="//page[2]" position="after">
+                     <header>
+                     <button string="Grabar Ultima Consulta"
+                                    type="object" name="add_medical_record"/>
+                     </header>
                     <page string="Medical Record">
                         <group string="Historial">
-                            <button string="Grabar Ultima Consulta"
-                                    type="object" name="_add_medical_record"/>
                             <field name="medical_record" nolabel="1"
                                    placeholder="aca se supone que la fecha y
 el usuario loggeado se guarda de forma automatica y readonly por ahora no esta..."/>
-                            <field name="medical_record_history" nolabel="1"/>
+                            <field name="medical_record_history" nolabel="1"
+                            placeholder="Historia clinica completa"/>
                         </group>
-
                         <separator string="Enfermedades"/>
                             <field name="disease_ids" widget="one2many_list" mode="tree">
                                 <!--<tree string="Enfermedades">-->
