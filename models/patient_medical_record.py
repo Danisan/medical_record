@@ -17,6 +17,8 @@ class medical_record_patient(models.Model):
     @api.depends('medical_record')
     def _add_medical_record(self):
         for x in self:
+            if not x.medical_record_history:
+                x.medical_record_history = ''
             x.medical_record_history += "\n{} - {}\n{}".format(
                 datetime.now().strftime('%d/%m/%Y %H:%M'), self.env.user.name,
                 x.medical_record)
