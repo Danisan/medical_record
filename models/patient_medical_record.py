@@ -18,5 +18,6 @@ class medical_record_patient(models.Model):
     def _add_medical_record(self):
         for x in self:
             x.medical_record_history += "\n{} - {}\n{}".format(
-                datetime.now(), self.env.user.name, x.medical_record)
+                datetime.now().strftime('%d/%m/%Y %H:%M'), self.env.user.name,
+                x.medical_record)
             x.medical_record = ''
