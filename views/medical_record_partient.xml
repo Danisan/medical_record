@@ -10,6 +10,8 @@
                  <xpath expr="//page[2]" position="after">
                     <page string="Medical Record">
                         <group string="Historial">
+                            <button string="Grabar Ultima Consulta"
+                                    type="object" name="_add_medical_record"/>
                             <field name="medical_record" nolabel="1"
                                    placeholder="aca se supone que la fecha y
 el usuario loggeado se guarda de forma automatica y readonly por ahora no esta..."/>

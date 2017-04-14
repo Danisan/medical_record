@@ -10,16 +10,13 @@ class medical_record_patient(models.Model):
 
     medical_record = fields.Text(string='Medical Record')
     medical_record_history = fields.Text(
-        string='Medical Record', store=True, compute='_add_medical_record',
-        readonly=True)
+        string='Medical Record', store=True, readonly=True)
 
-    @api.multi
-    @api.depends('medical_record')
     def _add_medical_record(self):
-        for x in self.with_context(skip_onchange_medical_record=True):
-            if not x.medical_record_history:
-                x.medical_record_history = ''
-            x.medical_record_history += "\n{} - {}\n{}".format(
-                datetime.now().strftime('%d/%m/%Y %H:%M'), self.env.user.name,
-                x.medical_record)
-            x.medical_record = ''
+        self.ensure_one()
+        if not self.medical_record_history:
+            self.medical_record_history = ''
+        self.medical_record_history += "\n{} - {}\n{}".format(
+            datetime.now().strftime('%d/%m/%Y %H:%M'), self.env.user.name,
+            self.medical_record)
+        self.medical_record = ''
