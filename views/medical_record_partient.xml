@@ -11,22 +11,23 @@
                     <page string="Medical Record">
                         <group string="Historial">
                             <field name="medical_record" nolabel="1"
-                            placeholder="aca se supone que la fecha y el usuario loggeado se guarda de forma automatica y readonly
-                                  por ahora no esta..."/>
+                                   placeholder="aca se supone que la fecha y
+el usuario loggeado se guarda de forma automatica y readonly por ahora no esta..."/>
+                            <field name="medical_record_history" nolabel="1"/>
                         </group>
 
-                        <separator string="Enfermedades"></separator>
+                        <separator string="Enfermedades"/>
                             <field name="disease_ids" widget="one2many_list" mode="tree">
                                 <!--<tree string="Enfermedades">-->
                                 <!--</tree>-->
                             </field>
 
-                        <separator string="Medicamentos"></separator>
+                        <separator string="Medicamentos"/>
                             <field name="medication_ids" widget="one2many_list" mode="tree">
                                 <!--<tree string="Medicamentos">-->
                                 <!--</tree>-->
                             </field>
-                        <separator string="Alergias"></separator>
+                        <separator string="Alergias"/>
                             <field name="allergy_ids" widget="one2many_list" mode="tree">
                                 <!--<tree string="Medicamentos">-->
                                 <!--</tree>-->
