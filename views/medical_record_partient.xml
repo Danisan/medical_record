@@ -15,10 +15,10 @@
                                     type="object" name="add_medical_record"/>
                         </header>
                         <group string="Historial">
-                            <field name="medical_record" nolabel="1"
+                            <field name="medical_record"
                                    placeholder="aca se supone que la fecha y
 el usuario loggeado se guarda de forma automatica y readonly por ahora no esta..."/>
-                            <field name="medical_record_history" nolabel="1"
+                            <field name="medical_record_history"
                             placeholder="Historia clinica completa"/>
                         </group>
                         <separator string="Enfermedades"/>
