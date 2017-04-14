@@ -34,6 +34,6 @@
         'views/medical_record_partient.xml',
 
     ],
-    'installable': False,
+    'installable': True,
 
 }
