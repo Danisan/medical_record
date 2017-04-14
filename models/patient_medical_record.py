@@ -19,4 +19,4 @@ class medical_record_patient(models.Model):
         for x in self:
             x.medical_record_history += "\n{} - {}\n{}".format(
                 datetime.now(), self.env.user.name, x.medical_record)
-            x.medical_record = False
+            x.medical_record = ''
