@@ -26,7 +26,6 @@ el usuario loggeado se guarda de forma automatica y readonly por ahora no esta..
                                 <!--<tree string="Enfermedades">-->
                                 <!--</tree>-->
                             </field>
-
                         <separator string="Medicamentos"/>
                             <field name="medication_ids" widget="one2many_list" mode="tree">
                                 <!--<tree string="Medicamentos">-->
@@ -37,8 +36,6 @@ el usuario loggeado se guarda de forma automatica y readonly por ahora no esta..
                                 <!--<tree string="Medicamentos">-->
                                 <!--</tree>-->
                             </field>
-
-
                     </page>
                 </xpath>
             </field>
